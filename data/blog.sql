@@ -56,7 +56,7 @@ INSERT INTO `post` (`id`, `title`, `content`, `author`, `createdAt`, `modifiedAt
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `fisrtname` varchar(20) NOT NULL,
+  `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
   `password` varchar(50) NOT NULL
@@ -66,7 +66,7 @@ CREATE TABLE `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `fisrtname`, `lastname`, `email`, `password`) VALUES
+INSERT INTO `user` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES
 (1, 'jane', 'doue', 'jadou@yahoo.co.uk', 'azerty'),
 (2, 'karl', 'thon', 'katon@gmail.com', 'azerty');
 
