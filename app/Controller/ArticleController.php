@@ -37,4 +37,9 @@ class ArticleController extends Controller
         ]);
     }
 
+    public function delete($id)
+    {
+        $this->dbug($id);
+    }
+
 }
