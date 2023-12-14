@@ -1,4 +1,4 @@
-<nav>
+<nav class="navbar">
     <ul>
         <li><a href="<?= $view->path('home'); ?>">Home</a></li>
         <li><a href="<?= $view->path('articles'); ?>">Articles</a></li>

@@ -15,9 +15,9 @@
     <?php include 'partials/nav.php' ?>
   </header>
 
-  <div class="container">
+  <main class="main">
     <?= $content; ?>
-  </div>
+  </main>
 
   <footer>
 
