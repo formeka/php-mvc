@@ -302,3 +302,6 @@ article > h3 {
     padding-bottom: var(--m);
 }
 
+.text-center {
+    text-align: center;
+}

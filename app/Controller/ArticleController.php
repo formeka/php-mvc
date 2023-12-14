@@ -16,12 +16,12 @@ class ArticleController extends Controller
     {
 
         $articles = PostModel::all();
-        $user = new UserModel;
+        $nbArticles = PostModel::count();
 
         $this->render('app.article.index',
         [
             'articles' => $articles,
-            'user' => $user,
+            'nbArticles' =>  $nbArticles
         ]);
     }
 
