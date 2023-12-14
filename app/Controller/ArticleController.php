@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Weblitzer\Controller;
 use App\Model\PostModel;
+use App\Model\UserModel;
 
 /**
  *
@@ -15,10 +16,13 @@ class ArticleController extends Controller
     {
 
         $articles = PostModel::all();
-        $this->dd($articles);
-        // $this->render('app.default.frontpage',array(
-        //     'message' => $message,
-        // ));
+        $user = new UserModel;
+
+        $this->render('app.article.index',
+        [
+            'articles' => $articles,
+            'user' => $user,
+        ]);
     }
 
 }
