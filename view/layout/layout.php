@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Framework POO</title>
+  <title>MVC Framework</title>
   <link rel="stylesheet" type="text/css" href="<?= $view->asset('css/style.css'); ?>">
 </head>
 
-<body>
-
+<body class="padding-l">
 
   <header>
     <?php include 'partials/nav.php' ?>
   </header>
 
-  <main class="main">
+  <main class="margin-top-l">
     <?= $content; ?>
   </main>
 
-  <footer>
-
+  <footer class="display-flex justify-content-center margin-y-xl">
+    <p>MVC Framework - 2023</p>
   </footer>
 
   <script src="<?= $view->asset('js/main.js'); ?>"></script>
