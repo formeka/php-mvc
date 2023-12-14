@@ -1,13 +1,12 @@
-<?php
-//$this->dbug($articles);
+<section>
+<?php foreach($articles as $article): ?>
+<article>
+<h3><?=$article->title?></h3>
 
-foreach($articles as $article):
-?>
-
-<p><?php
-    $this->dbug($user->findById($article->author, 'id')->firstname);
-    $this->dbug($user->findById($article->author, 'id')->lasttname);
-?></p>
+<p>
+    <strong>Publiée par :</strong> <?=$user->findById($article->author, 'id')->firstname . ' ' . $user->findById($article->author, 'id')->lastname?> le <?=$article->modifiedAt?>
+</p>
+</article>
 
 <?php endforeach; ?>
-
+</section>
