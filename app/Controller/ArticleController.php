@@ -25,4 +25,16 @@ class ArticleController extends Controller
         ]);
     }
 
+    public function show($id)
+    {
+        $article = PostModel::findById($id);
+        $user = new UserModel;
+
+        $this->render('app.article.show',
+        [
+            'article' => $article,
+            'user' => $user,
+        ]);
+    }
+
 }
