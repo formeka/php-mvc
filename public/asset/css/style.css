@@ -306,12 +306,28 @@ article > h3 {
     text-align: center;
 }
 
-.btn {
-    cursor: pointer;
+label,input,textarea {
+    display: block;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  label , form > div {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  form > div {
+    border-bottom: solid grey 1px;
+  }
+
+  input, textarea {
     color: #fff;
+    background-color: #ccc;
     font-family: inherit;
     font-size: inherit;
-    font-weight: bold;
     margin-right: 6px;
     margin-bottom: 6px;
     padding: 10px;
@@ -319,3 +335,61 @@ article > h3 {
     border-radius: 6px;
     outline: none;
   }
+
+input[type="submit"] , .btn {
+  cursor: pointer;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+input[type="radio"] , input[type="checkbox"] {
+  display: inline;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+select {
+  display: block;
+  margin: 0 0 1rem;
+  border: solid 1px #ddd;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #ccc;
+}
+
+.btn-primary {
+  background-color: blue;
+}
+
+.btn-success {
+    background-color: greenyellow;
+  }
+
+.btn-alert {
+background-color: red;
+}
+
+.error {
+  background-color: red;
+  color: white;
+  padding: 0 0.8rem;
+  font-weight: bold;
+}
+
+.error:hover {
+  text-decoration: none;
+} 
+
+.btn a {
+    text-decoration: none;
+}

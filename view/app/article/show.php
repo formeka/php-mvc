@@ -8,7 +8,7 @@
         <p>
             <a 
             href="<?= $view->path('delete', [$article->id]); ?>" 
-            class="btn">
+            class="btn btn-alert margin-y-xxl">
                 Supprimer
             </a>
         </p>

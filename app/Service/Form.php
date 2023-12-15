@@ -67,7 +67,7 @@ class Form
      */
     public function submit($name = 'submitted',$value='Envoyer')
     {
-        return '<input type="submit" name="'.$name.'" id="'.$name.'" value="'.$value.'">';
+        return '<input type="submit" name="'.$name.'" id="'.$name.'" value="'.$value.'" class="btn btn-primary">';
     }
 
     /**
