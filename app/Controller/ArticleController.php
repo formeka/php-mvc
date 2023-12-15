@@ -40,20 +40,28 @@ class ArticleController extends Controller
             $errors['titre'] = $validerArticle->textValid($postArticle['titre'],'titre',5,100);
             $errors['contenu'] = $validerArticle->textValid($postArticle['contenu'],'contenu',10,2000);
 
+            if($validerArticle->IsValid($errors)):
+                //Insertion des données du formulaire en base de donnée
+                PostModel::insert($postArticle);
+                $this->redirect('articles');
+            endif;
+
         endif;
 
         $formAdd = new Form($errors);
+        $users = UserModel::all();
 
         $this->render('app.article.addarticle',
         [
             'formAdd' => $formAdd,
+            'users' => $users
         ]);
     }
 
     public function show($id)
     {
         $article = $this->isArticleExist($id);
-         $user = new UserModel;
+        $user = new UserModel;
 
         $this->render('app.article.show',
         [

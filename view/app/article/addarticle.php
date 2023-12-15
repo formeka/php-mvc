@@ -9,6 +9,8 @@
     <?= $formAdd->textarea('contenu') ?>
     <?= $formAdd->error('contenu') ?>
 
+    <?= $formAdd->select('auteur',$users,'firstname') ?>
+
     <?= $formAdd->submit('submitted','Ajouter article') ?> 
 </form>
 </section>
