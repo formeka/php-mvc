@@ -6,6 +6,7 @@ use App\Weblitzer\Controller;
 use App\Model\PostModel;
 use App\Model\UserModel;
 use App\Service\Form;
+use App\Service\Validation;
 
 /**
  *
@@ -29,6 +30,18 @@ class ArticleController extends Controller
     public function add()
     {
         $errors = [];
+
+        // Test validation formulaire
+        if (!empty($_POST['submitted'])):
+            $postArticle = $this->cleanXss($_POST);
+
+            $validerArticle = new Validation;
+
+            $errors['titre'] = $validerArticle->textValid($postArticle['titre'],'titre',5,100);
+            $errors['contenu'] = $validerArticle->textValid($postArticle['contenu'],'contenu',10,2000);
+
+        endif;
+
         $formAdd = new Form($errors);
 
         $this->render('app.article.addarticle',

@@ -9,7 +9,7 @@
     <?= $formAdd->textarea('contenu') ?>
     <?= $formAdd->error('contenu') ?>
 
-    <?= $formAdd->submit('','Ajouter article') ?> 
+    <?= $formAdd->submit('submitted','Ajouter article') ?> 
 </form>
 </section>
 
