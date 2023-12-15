@@ -13,8 +13,6 @@ class PostModel extends ModelMVC
 
     public static function insert($post)
     {
-        // var_dump($post);
-        // die();
         App::getDatabase()->prepareInsert(
             'INSERT INTO ' . self::$table . ' (title,content,author) VALUES (?,?,?) ' , 
             [

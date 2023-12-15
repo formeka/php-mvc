@@ -11,6 +11,11 @@
             class="btn btn-alert margin-y-xxl">
                 Supprimer
             </a>
+            <a 
+            href="<?= $view->path('edit', [$article->id]); ?>" 
+            class="btn margin-y-xxl">
+                Edit
+            </a>
         </p>
     </article>
 </section>

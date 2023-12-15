@@ -58,8 +58,9 @@ class ArticleController extends Controller
         ]);
     }
 
-    public function edit()
+    public function edit($id)
     {
+        $articleEdit = $this->isArticleExist($id);
         $errors = [];
 
         // Test validation formulaire d'edition
@@ -73,8 +74,8 @@ class ArticleController extends Controller
 
             if($validerArticleEdit->IsValid($errors)):
                 //Insertion des données du formulaire en base de donnée
-                PostModel::update($postArticleEdit);
-                $this->redirect('articles');
+                //PostModel::update($postArticleEdit);
+                // $this->redirect('articles');
             endif;
 
         endif;
@@ -83,7 +84,8 @@ class ArticleController extends Controller
 
         $this->render('app.article.editarticle',
         [
-            'formAddEdit' => $formAddEdit
+            'formAddEdit' => $formAddEdit,
+            'articleEdit' => $articleEdit
         ]);
     }
 
