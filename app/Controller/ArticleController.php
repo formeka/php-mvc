@@ -17,7 +17,7 @@ class ArticleController extends Controller
     public function index()
     {
 
-        $articles = PostModel::all();
+        $articles = PostModel::allOrder('DESC');
         $nbArticles = PostModel::count();
 
         $this->render('app.article.index',
