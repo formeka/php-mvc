@@ -1,7 +1,11 @@
 <?php
 namespace App\Model;
 
-class PostModel extends \App\Weblitzer\Model 
+use App\Weblitzer\Model;
+// use App\Weblitzer\Model as ModelMVC;
+
+class PostModel extends Model
+// class PostModel extends ModelMVC 
 {
     protected static $table = 'post';
 
