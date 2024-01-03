@@ -74,8 +74,8 @@ class ArticleController extends Controller
 
             if($validerArticleEdit->IsValid($errors)):
                 //Insertion des données du formulaire en base de donnée
-                //PostModel::update($postArticleEdit);
-                // $this->redirect('articles');
+                PostModel::update($postArticleEdit,$id);
+                $this->redirect('articles');
             endif;
 
         endif;

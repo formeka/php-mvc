@@ -22,5 +22,16 @@ class PostModel extends ModelMVC
             ]
         );
     }
+
+    public static function update($post,$id)
+    {
+        App::getDatabase()->prepareInsert(
+            'UPDATE ' . self::$table . ' SET title = ?,content = ? WHERE id = ' . $id , 
+            [
+                $post['titre'],
+                $post['contenu']
+            ]
+        );
+    }
 	
 }

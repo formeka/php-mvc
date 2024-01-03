@@ -15,12 +15,4 @@ class AboutController extends Controller
         $this->render('app.default.about');
     }
 
-    /**
-     *
-     */
-    public function Page404()
-    {
-        $this->render('app.default.404');
-    }
-
 }
